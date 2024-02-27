@@ -57,7 +57,7 @@ jobs:
         working-directory: ReproducerApp
 
       - name: pod install
-        run: pod install
+        run: pod install --deployment
         working-directory: ReproducerApp/ios
 
       - name: Yarn Build iOS
