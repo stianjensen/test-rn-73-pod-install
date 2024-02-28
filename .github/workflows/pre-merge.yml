@@ -57,7 +57,11 @@ jobs:
         working-directory: ReproducerApp
 
       - name: pod install
-        run: pod install --deployment
+        run: pod install
+        working-directory: ReproducerApp/ios
+
+      - name: Show glog podspec
+        run: cat Pods/Local\ Podspecs/glog.podspec.json
         working-directory: ReproducerApp/ios
 
       - name: Yarn Build iOS
